@@ -36,11 +36,9 @@ export default async function MovieDetailPage({ params: { id } }: IParams) {
   return (
     <div>
       <Suspense fallback={<h1>Loading movie info</h1>}>
-        {/* @ts-expect-error Async Server Component */}
         <MovieInfo id={id} />
       </Suspense>
       <Suspense fallback={<h1>Loading movie videos</h1>}>
-        {/* @ts-expect-error Async Server Component */}
         <MovieVideos id={id} />
       </Suspense>
     </div>
